@@ -16,4 +16,14 @@ nodes = [n hidden_layer_nodes k];
 
 theta = initialize_theta(nodes);
 
+for i=1:size(x, 1)
 
+	xx = [1; x(i, :)'];
+	[y, a] = forward_propagate(nodes, theta, xx);
+
+	%Calculating final output error
+	e = d(i, :)' - y;
+
+	back_propagate(nodes, theta, a, e, y);
+
+end
