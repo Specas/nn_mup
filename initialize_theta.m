@@ -12,8 +12,7 @@ function theta = initialize_theta(nodes)
         theta_size = theta_size + nodes(i)*(nodes(i-1)+1);
         
     end
-    
-    disp(theta_size);
+
     theta = 2*epsilon*rand(theta_size, 1) - epsilon;
     
 end

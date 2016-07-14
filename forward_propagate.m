@@ -10,7 +10,7 @@ function [y, a] = forward_propagate(nodes, theta, x)
 
 		x = sigmoid(t*x);
 
-		%Append 1 for next phase
+		%Append 1 for next phase, except for the output node
 		if i~=length(nodes)-1
 
 			x = [1; x];
